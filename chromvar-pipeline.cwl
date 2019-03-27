@@ -8,30 +8,24 @@ requirements:
   SubworkflowFeatureRequirement: {}
 inputs:
   - id: hisat2_idx_basedir
-    label: "Path to directory containing the reference index"
-    doc: "Path to directory containing the reference index"
+    label: "HISAT2 index directory"
     type: Directory
   - id: hisat2_idx_basename
-    label: "Basename of the hisat2 index files"
-    doc: "Basename of the hisat2 index files, not including extensions like .1.ht2"
+    label: "HISAT2 index basename"
     type: string
   - id: fastq_directories
     label: "Directory containing subdirs for paired FASTQ files"
     type: Directory[]
   - id: nthreads
-    label: "Launch `nthreads` parallel search threads"
-    doc: >-
-      Launch `nthreads` parallel search threads (default: 1). Threads
-      will run on separate processors/cores and synchronize when parsing
-      reads and outputting alignments. Searching for alignments is
-      highly parallel, and speedup is close to linear. Increasing -p
-      increases HISAT2's memory footprint.
+    label: "Number of threads for alignment"
     type: int
     inputBinding:
       prefix: --threads
   - id: output_rdata_filename
+    label: "RData file containing chromVAR analysis workspace"
     type: string
   - id: output_plot_filename
+    label: "Plot of differential motif enrichment"
     type: string
 outputs:
   - id: rdata_output

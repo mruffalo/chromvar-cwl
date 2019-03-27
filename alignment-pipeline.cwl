@@ -5,24 +5,16 @@ cwlVersion: v1.0
 label: Short read alignment pipeline
 inputs:
   - id: hisat2_idx_basedir
-    label: "Path to directory containing the reference index"
-    doc: "Path to directory containing the reference index"
+    label: "HISAT2 index directory"
     type: Directory
   - id: hisat2_idx_basename
-    label: "Basename of the hisat2 index files"
-    doc: "Basename of the hisat2 index files, not including extensions like .1.ht2"
+    label: "HISAT2 index basename"
     type: string
   - id: fastq_dir
     label: "Directory containing two FASTQ files"
     type: Directory
   - id: nthreads
-    label: "Launch `nthreads` parallel search threads"
-    doc: >-
-      Launch `nthreads` parallel search threads (default: 1). Threads
-      will run on separate processors/cores and synchronize when parsing
-      reads and outputting alignments. Searching for alignments is
-      highly parallel, and speedup is close to linear. Increasing -p
-      increases HISAT2's memory footprint.
+    label: "Number of threads for alignment"
     type: int
     inputBinding:
       prefix: --threads
@@ -30,7 +22,7 @@ outputs:
   - id: output_bam
     outputSource: sort_bam/output_bam
     type: File
-    label: Sorted BAM file
+    label: "Sorted BAM file"
 steps:
   - id: align_reads
     in:
