@@ -1,0 +1,16 @@
+hisat2_idx_basedir:
+  class: Directory
+  path: /home/mruffalo/data/hisat2-indexes/grch38_tran
+hisat2_idx_basename: "genome_tran"
+fastq_directories:
+  - class: Directory
+    path: /home/mruffalo/data/sc-atac-seq/SRR5584321
+  - class: Directory
+    path: /home/mruffalo/data/sc-atac-seq/SRR5584402
+  - class: Directory
+    path: /home/mruffalo/data/sc-atac-seq/SRR5584449
+  - class: Directory
+    path: /home/mruffalo/data/sc-atac-seq/SRR5584473
+nthreads: 2
+output_rdata_filename: "chromvar.RData"
+output_plot_filename: "motif_enrichment.pdf"
