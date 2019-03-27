@@ -2,7 +2,7 @@
 
 class: Workflow
 cwlVersion: v1.0
-label: ATAC-seq pipeline
+label: chromVAR scATAC-seq pipeline
 requirements:
   ScatterFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}
