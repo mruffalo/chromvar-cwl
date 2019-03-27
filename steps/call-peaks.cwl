@@ -4,6 +4,7 @@ hints:
   DockerRequirement:
     dockerPull: mruffalo/genrich:latest
 baseCommand: Genrich
+label: Call peaks with Genrich
 
 arguments:
   - id: output_narrowpeak_filename

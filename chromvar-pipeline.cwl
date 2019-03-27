@@ -14,7 +14,7 @@ inputs:
     label: "HISAT2 index basename"
     type: string
   - id: fastq_directories
-    label: "Directory containing subdirs for paired FASTQ files"
+    label: "FASTQ parent directory"
     type: Directory[]
   - id: nthreads
     label: "Number of threads for alignment"
@@ -22,10 +22,10 @@ inputs:
     inputBinding:
       prefix: --threads
   - id: output_rdata_filename
-    label: "RData file containing chromVAR analysis workspace"
+    label: "chromVAR workspace output filename (.RData)"
     type: string
   - id: output_plot_filename
-    label: "Plot of differential motif enrichment"
+    label: "Motif enrichment output filename (.pdf)"
     type: string
 outputs:
   - id: rdata_output

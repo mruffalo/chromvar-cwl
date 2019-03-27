@@ -4,6 +4,7 @@ hints:
   DockerRequirement:
     dockerPull: humancellatlas/hisat2:2-2.1.0-a
 baseCommand: hisat2
+label: Align reads with HISAT2
 
 arguments:
   - prefix: -S

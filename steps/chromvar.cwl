@@ -4,6 +4,7 @@ hints:
   DockerRequirement:
     dockerImageId: mruffalo/chromvar
 baseCommand: Rscript
+label: Run chromVAR
 
 inputs:
   r_script:
